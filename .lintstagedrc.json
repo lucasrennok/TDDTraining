@@ -1,7 +1,3 @@
 {
-    "*.js": [
-      "standard --fix",
-      "npm run test:staged",
-      "git add"
-    ]
+  "*.js": ["npx standard --fix", "npm run test:staged", "git add"]
 }
