@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "test:staged": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --noStackTrace --runInBand --detectOpenHandles",
+    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace",
+    "test:ci": "jest --coverage=true --noStackTrace --silent",
+    "postinstall": "husky install"
   },
   "standard": {
     "env": [
